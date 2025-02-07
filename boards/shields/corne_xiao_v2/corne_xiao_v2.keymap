@@ -4,7 +4,7 @@
 #include <layouts/miryoku/miryoku_mousekeys.dtsi>
 #include <layouts/miryoku/miryoku_behaviors.dtsi>
 
-#include <layouts/miryoku/babel/miryoku_layer_selection.h>
+#include <layouts/miryoku/miryoku_babel/miryoku_layer_selection.h>
 
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
