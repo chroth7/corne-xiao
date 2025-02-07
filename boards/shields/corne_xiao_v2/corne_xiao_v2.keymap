@@ -4,6 +4,8 @@
 #include <layouts/miryoku/miryoku_mousekeys.dtsi>
 #include <layouts/miryoku/miryoku_behaviors.dtsi>
 
+#include <layouts/miryoku/miryoku_babel/miryoku_layer_alternatives.h>
+#include <layouts/miryoku/miryoku_babel/miryoku_layer_list.h>
 #include <layouts/miryoku/miryoku_babel/miryoku_layer_selection.h>
 
 #include <behaviors.dtsi>
