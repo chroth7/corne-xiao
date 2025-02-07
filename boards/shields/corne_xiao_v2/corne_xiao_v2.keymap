@@ -1,8 +1,8 @@
-#include <miryoku.dtsi>
-#include <miryoku_shift_functions.dtsi>
-#include <miryoku_double_tap_guard.dtsi>
-#include <miryoku_mousekeys.dtsi>
-#include <miryoku_behaviors.dtsi>
+#include "miryoku.dtsi"
+#include "miryoku_shift_functions.dtsi"
+#include "miryoku_double_tap_guard.dtsi"
+#include "miryoku_mousekeys.dtsi"
+#include "miryoku_behaviors.dtsi"
 
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
