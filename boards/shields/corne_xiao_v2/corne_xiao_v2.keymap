@@ -1,4 +1,9 @@
-#line 4 "/Users/christianroth/000CODE/personal/miryoku_zmk/miryoku/miryoku.dtsi"
+#include <../../../miryoku/miryoku.dtsi>
+#include <../../../miryoku/miryoku_shift_functions.dtsi>
+#include <../../../miryoku/miryoku_double_tap_guard.dtsi>
+#include <../../../miryoku/miryoku_mousekeys.dtsi>
+#include <../../../miryoku/miryoku_behaviors.dtsi>
+
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
 
@@ -10,7 +15,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
-#line 18 "/Users/christianroth/000CODE/personal/miryoku_zmk/miryoku/miryoku.dtsi"
 #include <dt-bindings/zmk/mouse.h>
 
 / {
@@ -25,7 +29,7 @@ BASE { display-name = "Base"; bindings = < &none  &kp Q  &kp W  &kp F  &kp P  &k
 
   };
 };
-#line 20 "/Users/christianroth/000CODE/personal/miryoku_zmk/miryoku/miryoku_shift_functions.dtsi"
+
 / { macros { u_macro_u_bt_sel_0: u_macro_u_bt_sel_0 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <0>; bindings = <&bt BT_SEL 0 &bt BT_CLR>; }; }; }; / { behaviors { u_bt_sel_0: u_bt_sel_0 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_SEL 0>, <&u_macro_u_bt_sel_0>; mods = <(MOD_LSFT|MOD_RSFT)>; }; }; };
 / { macros { u_macro_u_bt_sel_1: u_macro_u_bt_sel_1 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <0>; bindings = <&bt BT_SEL 1 &bt BT_CLR>; }; }; }; / { behaviors { u_bt_sel_1: u_bt_sel_1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_SEL 1>, <&u_macro_u_bt_sel_1>; mods = <(MOD_LSFT|MOD_RSFT)>; }; }; };
 / { macros { u_macro_u_bt_sel_2: u_macro_u_bt_sel_2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <0>; bindings = <&bt BT_SEL 2 &bt BT_CLR>; }; }; }; / { behaviors { u_bt_sel_2: u_bt_sel_2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_SEL 2>, <&u_macro_u_bt_sel_2>; mods = <(MOD_LSFT|MOD_RSFT)>; }; }; };
@@ -35,13 +39,13 @@ BASE { display-name = "Base"; bindings = < &none  &kp Q  &kp W  &kp F  &kp P  &k
 / { behaviors { u_out_tog: u_out_tog { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&out OUT_TOG>, <&out OUT_USB>; mods = <(MOD_LSFT|MOD_RSFT)>; }; }; };
 
 / { behaviors { u_caps_word: u_caps_word { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; }; }; };
-#line 18 "/Users/christianroth/000CODE/personal/miryoku_zmk/miryoku/miryoku_double_tap_guard.dtsi"
+
 / { behaviors { u_to_U_BASE: u_to_U_BASE { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 0>; }; }; }; / { behaviors { u_to_U_EXTRA: u_to_U_EXTRA { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 1>; }; }; }; / { behaviors { u_to_U_TAP: u_to_U_TAP { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 2>; }; }; }; / { behaviors { u_to_U_BUTTON: u_to_U_BUTTON { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 3>; }; }; }; / { behaviors { u_to_U_NAV: u_to_U_NAV { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 4>; }; }; }; / { behaviors { u_to_U_MOUSE: u_to_U_MOUSE { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 5>; }; }; }; / { behaviors { u_to_U_MEDIA: u_to_U_MEDIA { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 6>; }; }; }; / { behaviors { u_to_U_NUM: u_to_U_NUM { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 7>; }; }; }; / { behaviors { u_to_U_SYM: u_to_U_SYM { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 8>; }; }; }; / { behaviors { u_to_U_FUN: u_to_U_FUN { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>; bindings = <&none>, <&to 9>; }; }; };
-#line 4 "/Users/christianroth/000CODE/personal/miryoku_zmk/miryoku/miryoku_mousekeys.dtsi"
+
 / { macros { u_macro_btn1: u_macro_btn1 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <0>; bindings = <&kp KP_SLASH &kp KP_N5>; }; }; };
 / { macros { u_macro_btn2: u_macro_btn2 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <0>; bindings = <&kp KP_MINUS &kp KP_N5>; }; }; };
 / { macros { u_macro_btn3: u_macro_btn3 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <0>; bindings = <&kp KP_ASTERISK &kp KP_N5>; }; }; };
-#line 4 "/Users/christianroth/000CODE/personal/miryoku_zmk/miryoku/miryoku_behaviors.dtsi"
+
 / {
   behaviors {
     u_mt: u_mt {
